@@ -1,0 +1,18 @@
+function [flag, passdownpopulation]=stopCriterion(it,population,previouspopulation,V,M)
+% Return :  1 if the GA must continue 
+%           0 if the GA must stop
+
+%     flag=1;
+%     if it > 400
+%         flag=0;
+%     end
+    passdownpopulation = population;
+    if (length(previouspopulation) == 0)
+        flag = 1;
+    elseif  sum(abs(abs(population())) norm(population(:,V+1:V+M))
+        
+    else
+       flag = 1; 
+    end
+
+end

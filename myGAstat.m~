@@ -1,4 +1,6 @@
-function population=myGA(f,V,M,lb,ub)
+
+
+function [population,it]=myGA(f,V,M,lb,ub,N,NP,NC,P)
 % myGA(f,V,M,lb,ub)
 % f : function to minimize
 % V : Dimension of the search space.
@@ -27,7 +29,7 @@ population=sortPopulation(population,V,M);
 
 flag = true;
 previouspopulation = [];
-it=1;
+it=1
 while flag
 
     parents=selectionTournament(population,NP,V,M);	
@@ -51,15 +53,14 @@ while flag
     end
     hold off
     scatter(population(:,V+1),population(:,V+2))
-     title(['Search Space, Iteration ' num2str(it)])
     t=0:0.01:1;
     hold on
     plot(t,1-t.^2,'r');
-    pause(0.1)
+    %pause(0.1)
         
     it=it+1;
     [flag, previouspopulation] = stopCriterion(it,population,previouspopulation,V,M);
 end
-it = it-1
+it
 
 end

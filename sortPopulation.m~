@@ -82,6 +82,7 @@ else % Multi-objective case : non-domination sorting
     rank = 1;
     rankpoints = sortedRank(sortedRank(:,V+M+1)==rank,:);
     kleinem = 1;
+    result = [];
     while ~isempty(rankpoints)
         
         CD = zeros(size(rankpoints,1),1);
@@ -91,15 +92,17 @@ else % Multi-objective case : non-domination sorting
            rankpoints(1,V+M+2) = inf;
            rankpoints(end,V+M+2) = inf;
            for k=2:(size(rankpoints,1)-1)
-               rankpoints(k,V+M+2) = rankpoints(k,V+M+2) + (rankpoints(k-1,V+kleinem))/()
+               rankpoints(k,V+M+2) = rankpoints(k,V+M+2) + ((rankpoints(k+1,V+kleinem) - rankpoints(k-1,V+kleinem))/(max(rankpoints(:,V+kleinem)) - min(rankpoints(:,V+kleinem))));
            end
            kleinem = kleinem +1;
         end
-        
+        result = [result; rankpoints];
         rank = rank+1;
         rankpoints = sortedRank(sortedRank(:,V+M+1)==rank,:);
+        kleinem = 1;
     end
     
-    sorted = sortrows(result,[V+M+1,-1*(V+M+2)])
-
+    result = sortrows(result,[V+M+1,-1*(V+M+2)])
+    
+    sorted = result;
 end

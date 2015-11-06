@@ -10,7 +10,7 @@ for i = 1:NC
         else
             mask=rand(1,V)< 0.25;
         end
-        parent(1:V) = min(max(parent(1:V) + mask*0.09.*randn(1,V) ,0),1);
+        parent(1:V) = min(max(parent(1:V) + mask*0.3.*randn(1,V) ,0),1);
         children = [children; parent(1:V)];
     else
 %         B=randi(V-1);
@@ -29,17 +29,14 @@ for i = 1:NC
             keuzeB = randi(size(parents,1));
         end
         parentA = parents(keuzeA,:);
-        parentB = parents(keuzeB,:);
-        child = [];
+        parentB = parents(keuzeB,:)
         for j = 1:V
            if rand < 0.5
-               child = [child min(max(parentA(j)+0.1*rand,0),1)];
+               
            else
-               child = [child min(max(parentA(j)+0.1*rand,0),1)];
+               
            end
-           
         end
-        children = [children; child];
     end
 end
 

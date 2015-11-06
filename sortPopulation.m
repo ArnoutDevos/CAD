@@ -14,19 +14,15 @@ else % Multi-objective case : non-domination sorting
         indexforthisrank = [];
         for i = 1:size(points,1)
             for j= 1:size(points,1)
-               if ~(j==i)
-%                    
-%                    points(i,V+1:V+M)
-%                    
-%                    points(j,V+1:V+M)
-%                    pause
+               if j~=i
                    dominantergevonden = all(points(i,V+1:V+M) >= points(j,V+1:V+M));
-                   if points(i,V+1:V+M) == points(j,V+1:V+M)
-                       dominantergevonden = false;
-                   end
                    if dominantergevonden
-                       ok = false;
-                       break
+                       if points(i,V+1:V+M) == points(j,V+1:V+M)
+                            dominantergevonden = false;
+                       else
+                            ok = false;
+                            break
+                       end
                    else
                        ok = true;
                    end
@@ -102,6 +98,7 @@ else % Multi-objective case : non-domination sorting
         kleinem = 1;
     end
     
-    sorted = sortrows(result,[V+M+1,-1*(V+M+2)])
-
+    result = sortrows(result,[V+M+1,-1*(V+M+2)]);
+    
+    sorted = result;
 end

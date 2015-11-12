@@ -10,8 +10,8 @@ for i = 1:NC
         else
             mask=rand(1,V)< 0.25;
         end
-        parent(1:V) = min(max(parent(1:V) + mask*0.09.*randn(1,V) ,0),1);
-        children = [children; parent(1:V)];
+        parent(1,1:V) = min(max(parent(1,1:V) + mask*0.2.*randn(1,V) ,0),1);
+        children = [children; parent(1,1:V)];
     else
 %         B=randi(V-1);
 %         keuzeA = randi(size(parents,1));

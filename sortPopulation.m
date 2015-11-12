@@ -43,9 +43,11 @@ else % Multi-objective case : non-domination sorting
 
         
     end
+    
+    sortedRank = sortrows(sortedRank,V+M+1);
     %% Crowding Distance
     % To be written
-%     k = 0.1; %Fraction of distances which will be considered in crowding distance
+%     k = 0.5; %Fraction of distances which will be considered in crowding distance
 %     rank = 1;
 %     sortedRankCD = [];
 %     CDrank = [];
@@ -54,7 +56,7 @@ else % Multi-objective case : non-domination sorting
 %     while ~isempty(rankpoints)
 %         for i = 1:size(rankpoints,1)
 %             for j= 1:size(rankpoints,1)
-%                if ~(j==i)
+%                if ~(rankpoints(j,1:V)==rankpoints(i,1:V))
 %                    distance = norm(rankpoints(j,V+1:V+M)-rankpoints(i,V+1:V+M));
 %                    CDrank = [CDrank; distance];
 %                end
@@ -73,32 +75,33 @@ else % Multi-objective case : non-domination sorting
 %         rankpoints = sortedRank(sortedRank(:,V+M+1)==rank,:);
 %     end
 %     result = [sortedRank,sortedRankCD]; %add CD column to result
+%    result = sortrows(result,[V+M+1,-(V+M+2)]);
 
 
     rank = 1;
     rankpoints = sortedRank(sortedRank(:,V+M+1)==rank,:);
-    kleinem = 1;
+    littlem = 1;
     result = [];
     while ~isempty(rankpoints)
         
         CD = zeros(size(rankpoints,1),1);
         rankpoints = [rankpoints CD];
-        while kleinem <= M
-           rankpoints = sortrows(rankpoints,V+kleinem);
+        while littlem <= M
+           rankpoints = sortrows(rankpoints,V+littlem);
            rankpoints(1,V+M+2) = inf;
            rankpoints(end,V+M+2) = inf;
            for k=2:(size(rankpoints,1)-1)
-               rankpoints(k,V+M+2) = rankpoints(k,V+M+2) + ((rankpoints(k+1,V+kleinem) - rankpoints(k-1,V+kleinem))/(max(rankpoints(:,V+kleinem)) - min(rankpoints(:,V+kleinem))));
+               rankpoints(k,V+M+2) = rankpoints(k,V+M+2) + ((rankpoints(k+1,V+littlem) - rankpoints(k-1,V+littlem))/(max(rankpoints(:,V+littlem)) - min(rankpoints(:,V+littlem))));
            end
-           kleinem = kleinem +1;
+           littlem = littlem +1;
         end
         result = [result; rankpoints];
         rank = rank+1;
         rankpoints = sortedRank(sortedRank(:,V+M+1)==rank,:);
-        kleinem = 1;
+        littlem = 1;
     end
     
     result = sortrows(result,[V+M+1,-1*(V+M+2)]);
     
-    sorted = result;
+     sorted = result;
 end

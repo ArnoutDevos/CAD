@@ -1,0 +1,18 @@
+
+.global 0 
+
+.param X1=100 X2=100
+
+R01 vout 0 'X1'
+C01 vin vout 'X2'
+
+v_V0 netVDD 0 dc 3.3
+
+.option hmax=1m
+.dc
+
+.data list X1 X2
+xxPARAMxx
+.enddata
+
+.printfile dc v(vout) file=dcResult

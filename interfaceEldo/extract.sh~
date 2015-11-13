@@ -1,0 +1,28 @@
+
+rm -rf tmp
+mkdir tmp
+flag=true
+cnt=1
+while read line
+do
+
+	if [ $flag ]
+	then
+		if [ "${line:0:1}" != "#" ]
+		then
+			echo $line > tmp/f$cnt
+			flag=false
+			echo "FALSE"
+		fi
+	else
+		if [ "${line:0:1}" == "#" ]
+		then
+			flag=true
+			cnt=`expr $cnt + 1`
+			echo "Next : $cnt"			
+		else
+			echo $line >> tmp/f$cnt
+		fi
+	fi
+
+done < testResult

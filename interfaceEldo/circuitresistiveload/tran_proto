@@ -1,0 +1,48 @@
+
+.global 0 
+
+.param R1=10000 W1=1u L1=1u Wb=1u Lb=1u VB=1
+
+
+*resistive load diff pair
+
+.model nMOS nmos level=53
+.model pMOS pmos level=53
+
+R01 netVDD voutl 'R1'
+R02 netVDD voutr 'R1'
+
+m1 voutl vinl virtgr 0 nMOS w='W1' l='L1'
+m2 voutr vinr virtgr 0 nMOS w='W1' l='L1'
+
+C01 voutr 0 5p
+C02 voutl 0 5p
+
+m3 virtgr vbias 0 0 nMOS w='Wb' l='Lb'
+
+V0 netVDD 0 dc 3.3
+
+*V3 vinl voffset pulse( 0 0.5 0 1p 1m)
+
+*V4 vinr voffset pulse( 0 -0.5 0 1p 1m)
+
+*V3 vinl voffset ac=0.5
+
+*V4 vinr voffset ac=-0.5
+
+V3 vinl voffset dc 0 ac sin(0 0.01 1e3)
+
+V4 vinr voffset dc 0 ac sin(0 -0.01 1e3)
+
+V1 voffset 0 dc 2
+
+V2 vbias 0 'VB'
+
+.option hmax=1u
+.tran 1u 1m data=list
+
+.data list R1 W1 L1 Wb Lb VB
+xxPARAMxx
+.enddata
+
+.printfile tran v(voutr, voutl) file=tranResult

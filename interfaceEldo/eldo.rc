@@ -1,0 +1,7 @@
+# MICAS Mentor AMS 2014.1
+# Ben Geeraerts, February 26th 2015
+
+export MGC_AMS_HOME=/esat/micas-data/software/ams_2014.1
+export PATH=$MGC_AMS_HOME/modeltech/bin:$MGC_AMS_HOME/bin:$PATH
+export MGLS_LICENSE_FILE=1717@licserv
+

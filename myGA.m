@@ -49,12 +49,13 @@ while flag
         drawnow;
         %pause(0.1);
     end
+    figure(1)
     hold off
     plot(population(:,V+1),population(:,V+2),'x')
      title(['Search Space, Iteration ' num2str(it)])
-    t=0:0.01:1;
-    hold on
-    plot(t,1-t.^2,'r');
+%     t=0:0.01:1;
+%     hold on
+%     plot(t,1-t.^2,'r');
     pause(0.1)
         
     it=it+1;

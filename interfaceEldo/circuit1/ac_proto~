@@ -1,0 +1,17 @@
+
+.global 0 
+
+.param X1=100 X2=100
+
+R01 vout 0 'X1'
+C01 vin vout 'X2'
+
+V0 vin 0 DC=0 AC=1 sin
+
+.ac 10 1G data=list
+
+.data list X1 X2
+xxPARAMxx
+.enddata
+
+.printfile ac v(vout) file=acResult

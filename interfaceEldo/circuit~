@@ -1,0 +1,21 @@
+
+.global 0 
+
+.param X1=100 X2=100 X3=100
+
+R01 netVDD i1 'X1'
+R02 i1 i2 'X2'
+R03 i2 0 'X3'
+
+v_V0 netVDD 0 dc 3.3
+
+.option hmax=1m
+.tran 1m 1 data=list
+
+.data list X1 X2 X3
++ 100 200 300
++ 200 300 400 
++ 300 400 500 
+.enddata
+
+.printfile tran v(i1) file=testResult

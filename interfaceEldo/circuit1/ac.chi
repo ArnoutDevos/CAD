@@ -1,0 +1,422 @@
+  Run on pc-klas1-8.esat.kuleuven.be (Linux 3.10.0-229.20.1.el7.x86_64)
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : r0260116@pc-klas1-8.esat.kuleuven.be
+*** OS    : \S [VCO = aol]
+*** CPU   :
+    Intel(R) Core(TM) i5-3450 CPU @ 3.10GHz
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 4
+    Number of logical processors      : 4
+*** Freq  : 3315.910MHz
+*** Cache : 6144 KB
+*** MEM   : 7908396 kB
+*** Date  : Fri Nov 13 12:07:14 2015
+
+/esat/micas-data/software/ams_2014.1/aol/bin/eldo_64.exe -i interfaceEldo/circuit1/ac 
+
+
+***** PRE-PROCESSING ...
+
+1*******13-Nov-15 *******  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  *******12:07:14******
+
+0
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  .GLOBAL 0 
+    3  
+    4  .PARAM X1=100 X2=0.1
+    5  
+    6  R01 VIN VOUT 'X1'
+    7  C01 VOUT 0 'X2'
+    8  
+    9  V0 vin 0 ac 1
+   10  
+   11  .AC dec 10 100 1G data=list
+   12  
+   13  .DATA list X1 X2
+   14  + 77870.1413 2.9942e-06 5.3232e-06 5.4593e-06 4.9681e-06 2.7674 
+   15  .ENDDATA
+   16  
+   17  .PRINTFILE ac v(vout) file=acResult
+   18  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (MB):    262
+3 elements
+2 nodes 
+1 input signals
+Detail about objects and nodes found in the design, and simulated by Eldo:
+Number of nodes                     2
+Number of intrinsic nodes           0
+Number of input signals             1
+Number of resistors                 1
+Number of floating capacitors       0
+Number of grounded capacitors       1
+Number of inductors                 0
+Number of voltage sources           1
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       0
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  3
+
+
+0************************************************************************************************************************
+
+
+run number 1 out of 3
+   value of parameter X1 is 7.787014E+04
+   value of parameter X2 is 2.994200E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 12:07:14
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************12:07:14*****************
+
+0NO_TITLE
+0****                 OPTION SUMMARY                                         TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+*** DC Control Options : 
+
+GMIN           = 1.00e-12 NMAXSIZE       = 100000   ITL1           = 100      
+GRAMP          = 0        NETSIZE        = 100      VMINDC         = UNDEF    
+VMAXDC         = UNDEF    
+
+*** Initial Accuracy Control Options (May be adjusted during simulation): 
+
+ITOL           = 1.00e-06 EPS            = 5.00e-03 VNTOL          = 1.00e-06 
+RELTOL         = 1.00e-03 RELERR         = 5.00e-02 PIVREL         = 1.00e-03 
+PIVTOL         = 1.00e-16 ABSTOL         = 1.00e-12 FLXTOL         = 1.00e-11 
+MAXORD         = 2.00e+00 
+
+*** Time-step Control Options : 
+
+ZOOMTIME       = 1.00e+00 STEP           = 0.00e+00 STARTSMP       = 0.00e+00 
+FREQSMP        = 0.00e+00 COURESOL       = 0.00e+00 TRTOL          = 7.00e+00 
+HMIN           = 1.00e-12 ITL3           = 3        ITL4           = 13       
+FT             = 1.25e-01 DCLOG          = 1.00e+00 LVLTIM         = 2        
+LVLCNV         = 2        DVDT           = -1       RELVAR         = 1.50e-01 
+ABSVAR         = 2.00e-01 SAMPLE         = 0.00e+00 HMAX           = UNDEF    
+
+
+*** MosFet default Options : 
+
+SCALE          = 1.00e+00 SCALM          = 1.00e+00 SCALEBSIM      = 1.00e+00 
+DEFAD          = UNDEF    DEFAS          = UNDEF    DEFPD          = UNDEF    
+DEFPS          = UNDEF    DEFW           = 1.00e-04 DEFL           = 1.00e-04 
+DEFNRD         = UNDEF    DEFNRS         = UNDEF    XA             = 6.00e-06 
+LIMRMOS        = UNDEF    SHRINK         = 1.00e+00 
+
+*** General Information Options : 
+
+CPTIME         = UNDEF    STAT           = 0        TIMEDIV        = 0        
+SIMUDIV        = 10       SAVETIME       = 0        MAXTRAN        = 1000     
+MAXNODES       = 10000    MAXV           = 1.00e+13 LIMPROBE       = 10000    
+FLICKER_NOISE  = 0        THERMAL_NOISE  = 0        TNOM           = 2.70e+01 
+TMAX           = UNDEF    
+SPICDC         = 0        SPIOUT         = 0        NEWTON         = 1        
+OSR            = 0        TRAP           = 1        GEAR           = 0        
+BE             = 0        PROBEOP        = 0        NOLAT          = 0        
+NWLAT          = 0        ANALOG         = 0        BBDEBUG        = 0        
+NOSIZECHK      = 0        QTRUNC         = 1        UNBOUND        = 0        
+LCAPOP         = 0        NOAEX          = 0        AEX            = 0        
+AEX            = 0        STVER          = 0        MOTOROLA       = 0        
+AMS            = 0        ASPEC          = 0        INPUT          = 0        
+NOINIT         = 0        PSF            = 0        NOBIN          = 0        
+NOCOU          = 1        WL             = 0        NODE           = 0        
+LIST           = 0        SPI3BIN        = 0        SPI3ASC        = 0        
+NOMOD          = 0        NOBIN          = 0        NOCOU          = 1        
+RMOS           = 0        NWRMOS         = 1        NONWRMOS       = 0        
+USEDEFAP       = 0        NOASCII        = 0        ASCII          = 1        
+MIXED          = 0        SWITCH         = 0        USERSWITCH     = 0        
+TIMING         = 0        MODWL          = 1        ULOGIC         = 0        
+
+
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************12:07:14*****************
+
+0NO_TITLE
+0****                 SMALL SIGNAL BIAS SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************12:07:14*****************
+
+0NO_TITLE
+0****                 OPERATING POINT INFORMATION                          TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+               R01          
+V+              0.0         
+V-              0.0         
+ID              0.0         
+
+
+***>CPU TIME 0s 000ms <***
+
+
+
+
+
+***>CPU TIME 0s 000ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 2 out of 3
+   value of parameter X1 is 5.323200E-06
+   value of parameter X2 is 5.459300E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 12:07:14
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************12:07:14*****************
+
+0NO_TITLE
+0****                 SMALL SIGNAL BIAS SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************12:07:14*****************
+
+0NO_TITLE
+0****                 OPERATING POINT INFORMATION                          TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+               R01          
+V+              0.0         
+V-              0.0         
+ID              0.0         
+
+
+***>CPU TIME 0s 000ms <***
+
+
+
+
+
+***>CPU TIME 0s 000ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 3 out of 3
+   value of parameter X1 is 4.968100E-06
+   value of parameter X2 is 2.767400
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 12:07:14
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+Warning 123:  NODE "VOUT": A capacitor of more than 1F is attached to that node
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************12:07:14*****************
+
+0NO_TITLE
+0****                 SMALL SIGNAL BIAS SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************12:07:14*****************
+
+0NO_TITLE
+0****                 OPERATING POINT INFORMATION                          TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+               R01          
+V+              0.0         
+V-              0.0         
+ID              0.0         
+
+
+***>CPU TIME 0s 000ms <***
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************12:07:14*****************
+
+0NO_TITLE
+0****                 ACCOUNTING INFORMATION                                 TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+Number of nodes                     2
+Number of intrinsic nodes           0
+Number of input signals             1
+Number of resistors                 1
+Number of floating capacitors       0
+Number of grounded capacitors       1
+Number of inductors                 0
+Number of voltage sources           1
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       0
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  3
+Number of equations                 3
+Number of non-zero terms            9
+Percent Zeros                          0
+Number of Newton iterations         1
+Number of AC points                 71
+Evaluation of active devices        0
+Memory size (MB)                    265.6
+
+***>CPU TIME 0s 000ms <***
+
+
+***>GLOBAL CPU TIME 0s 020ms <***
+
+
+***>GLOBAL ELAPSED TIME 0s <***
+
+
+  Job started at 13-Nov-2015 12:07:14
+  Job end at     13-Nov-2015 12:07:14
+
+  Run on pc-klas1-8.esat.kuleuven.be (Linux 3.10.0-229.20.1.el7.x86_64)
+

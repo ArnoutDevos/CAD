@@ -35,7 +35,7 @@ for i = 1:NC
            if rand < 0.5
                child = [child min(max(parentA(j)+0.1*rand,0),1)];
            else
-               child = [child min(max(parentA(j)+0.1*rand,0),1)];
+               child = [child min(max(parentB(j)+0.1*rand,0),1)];
            end
            
         end

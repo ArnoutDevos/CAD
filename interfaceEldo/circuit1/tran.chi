@@ -1,0 +1,3170 @@
+  Run on pc-klas1-8.esat.kuleuven.be (Linux 3.10.0-229.20.1.el7.x86_64)
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : r0260116@pc-klas1-8.esat.kuleuven.be
+*** OS    : \S [VCO = aol]
+*** CPU   :
+    Intel(R) Core(TM) i5-3450 CPU @ 3.10GHz
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 4
+    Number of logical processors      : 4
+*** Freq  : 3380.695MHz
+*** Cache : 6144 KB
+*** MEM   : 7908396 kB
+*** Date  : Fri Nov 13 09:27:02 2015
+
+/esat/micas-data/software/ams_2014.1/aol/bin/eldo_64.exe -i interfaceEldo/circuit1/tran 
+
+
+***** PRE-PROCESSING ...
+
+1*******13-Nov-15 *******  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  *******09:27:02******
+
+0
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  .GLOBAL 0 
+    3  
+    4  .PARAM X1=100 X2=0.1
+    5  
+    6  R01 VIN VOUT 'X1'
+    7  C01 VOUT 0 'X2'
+    8  
+    9  V0 vin 0 pulse( 0 3.3 0 1p 1m)
+   10  
+   11  .OPTION hmax=1u
+   12  .tran 1u 1m data=list
+   13  
+   14  .DATA list X1 X2
+   15  + 65130.9823 7.6478e-06 7.9213e-06 5.9706e-06 2.3186e-06 0.40898 
+   16  + 99095.5185 6.2739e-06 6.233e-06 6.669e-06 2.7016e-06 1.6182 
+   17  + 57491.2062 3.2206e-06 9.3548e-06 1.2879e-06 1.3839e-06 2.8149 
+   18  + 53157.1047 6.9977e-06 6.2208e-06 6.5324e-06 6.7168e-06 2.884 
+   19  + 82121.2845 1.7513e-06 1.1528e-06 4.2617e-06 3.5368e-06 0.89197 
+   20  + 30505.8642 6.6336e-06 2.0877e-06 1.4458e-06 5.8474e-06 0.68792 
+   21  + 54828.4862 6.9485e-06 8.7644e-06 5.4061e-06 7.2565e-06 1.8644 
+   22  + 91076.724 7.5678e-06 5.3587e-06 2.7326e-06 5.492e-06 2.113 
+   23  + 61719.5097 9.0168e-06 8.6037e-06 2.1078e-06 5.8222e-06 1.3762 
+   24  + 86066.0367 9.8407e-06 2.8846e-06 2.8494e-06 5.0066e-06 0.67972 
+   25  .ENDDATA
+   26  
+   27  .PRINTFILE tran v(vout) file=tranResult
+   28  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+Warning 220: In file "./interfaceEldo/circuit1/tran" line 9:
++    OBJECT "V0": Default values used for time specification : parameter TSAMPLE set to  1e+06ns.
+Warning 220: In file "./interfaceEldo/circuit1/tran" line 9:
++    OBJECT "V0": Default values used for time specification.
+
+***** 0  error(s). 
+***** 2  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (MB):    263
+3 elements
+2 nodes 
+1 input signals
+Detail about objects and nodes found in the design, and simulated by Eldo:
+Number of nodes                     2
+Number of intrinsic nodes           0
+Number of input signals             1
+Number of resistors                 1
+Number of floating capacitors       0
+Number of grounded capacitors       1
+Number of inductors                 0
+Number of voltage sources           1
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       0
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  3
+
+
+0************************************************************************************************************************
+
+
+run number 1 out of 30
+   value of parameter X1 is 6.513098E+04
+   value of parameter X2 is 7.647800E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 OPTION SUMMARY                                         TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+*** DC Control Options : 
+
+GMIN           = 1.00e-12 NMAXSIZE       = 100000   ITL1           = 100      
+GRAMP          = 0        NETSIZE        = 100      VMINDC         = UNDEF    
+VMAXDC         = UNDEF    
+
+*** Initial Accuracy Control Options (May be adjusted during simulation): 
+
+ITOL           = 1.00e-06 EPS            = 5.00e-03 VNTOL          = 1.00e-06 
+RELTOL         = 1.00e-03 RELERR         = 5.00e-02 PIVREL         = 1.00e-03 
+PIVTOL         = 1.00e-16 ABSTOL         = 1.00e-12 FLXTOL         = 1.00e-11 
+MAXORD         = 2.00e+00 
+
+*** Time-step Control Options : 
+
+ZOOMTIME       = 1.00e+00 STEP           = 0.00e+00 STARTSMP       = 0.00e+00 
+FREQSMP        = 0.00e+00 COURESOL       = 0.00e+00 TRTOL          = 7.00e+00 
+HMIN           = 1.00e-12 ITL3           = 3        ITL4           = 13       
+FT             = 1.25e-01 DCLOG          = 1.00e+00 LVLTIM         = 2        
+LVLCNV         = 2        DVDT           = -1       RELVAR         = 1.50e-01 
+ABSVAR         = 2.00e-01 SAMPLE         = 0.00e+00 HMAX           = 1.00e-06 
+
+
+*** MosFet default Options : 
+
+SCALE          = 1.00e+00 SCALM          = 1.00e+00 SCALEBSIM      = 1.00e+00 
+DEFAD          = UNDEF    DEFAS          = UNDEF    DEFPD          = UNDEF    
+DEFPS          = UNDEF    DEFW           = 1.00e-04 DEFL           = 1.00e-04 
+DEFNRD         = UNDEF    DEFNRS         = UNDEF    XA             = 6.00e-06 
+LIMRMOS        = UNDEF    SHRINK         = 1.00e+00 
+
+*** General Information Options : 
+
+CPTIME         = UNDEF    STAT           = 0        TIMEDIV        = 0        
+SIMUDIV        = 10       SAVETIME       = 0        MAXTRAN        = 1000     
+MAXNODES       = 10000    MAXV           = 1.00e+13 LIMPROBE       = 10000    
+FLICKER_NOISE  = 0        THERMAL_NOISE  = 0        TNOM           = 2.70e+01 
+TMAX           = UNDEF    
+SPICDC         = 0        SPIOUT         = 0        NEWTON         = 1        
+OSR            = 0        TRAP           = 1        GEAR           = 0        
+BE             = 0        PROBEOP        = 0        NOLAT          = 0        
+NWLAT          = 0        ANALOG         = 0        BBDEBUG        = 0        
+NOSIZECHK      = 0        QTRUNC         = 1        UNBOUND        = 0        
+LCAPOP         = 0        NOAEX          = 0        AEX            = 0        
+AEX            = 0        STVER          = 0        MOTOROLA       = 0        
+AMS            = 0        ASPEC          = 0        INPUT          = 0        
+NOINIT         = 0        PSF            = 0        NOBIN          = 0        
+NOCOU          = 1        WL             = 0        NODE           = 0        
+LIST           = 0        SPI3BIN        = 0        SPI3ASC        = 0        
+NOMOD          = 0        NOBIN          = 0        NOCOU          = 1        
+RMOS           = 0        NWRMOS         = 1        NONWRMOS       = 0        
+USEDEFAP       = 0        NOASCII        = 0        ASCII          = 1        
+MIXED          = 0        SWITCH         = 0        USERSWITCH     = 0        
+TIMING         = 0        MODWL          = 1        ULOGIC         = 0        
+
+
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 2 out of 30
+   value of parameter X1 is 7.921300E-06
+   value of parameter X2 is 5.970600E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.5850 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.5850 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.5850 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.5850 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.5850 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.5850 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 70% (t = 700.5850 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.5850 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.5850 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 83%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 3 out of 30
+   value of parameter X1 is 2.318600E-06
+   value of parameter X2 is 0.408980
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.7837 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 20% (t = 200.7837 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.7837 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.7837 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.7837 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.7837 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 70% (t = 700.7837 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.7837 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.7837 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  30)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  30)
+CPU Usage                          :   0%               (100%)
+
+
+
+
+***>CPU TIME 0s 030ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 4 out of 30
+   value of parameter X1 is 9.909552E+04
+   value of parameter X2 is 6.273900E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 5 out of 30
+   value of parameter X1 is 6.233000E-06
+   value of parameter X2 is 6.669000E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.5462 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.5462 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.5462 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.5462 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.5462 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.5462 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 66%)
+................................................
+Simulation progress                : 70% (t = 700.5462 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.5462 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.5462 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 83%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 6 out of 30
+   value of parameter X1 is 2.701600E-06
+   value of parameter X2 is 1.618200
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+Warning 123:  NODE "VOUT": A capacitor of more than 1F is attached to that node
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.5993 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.5993 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.5993 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.5993 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.5993 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.5993 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 70% (t = 700.5993 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.5993 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.5993 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 83%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 7 out of 30
+   value of parameter X1 is 5.749121E+04
+   value of parameter X2 is 3.220600E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 8 out of 30
+   value of parameter X1 is 9.354800E-06
+   value of parameter X2 is 1.287900E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.1212 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 20% (t = 200.1212 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.1212 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.1212 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 50% (t = 500.1212 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 76%)
+................................................
+Simulation progress                : 60% (t = 600.1212 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 70% (t = 700.1212 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.1212 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.1212 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 83%)
+
+
+
+
+***>CPU TIME 0s 030ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 9 out of 30
+   value of parameter X1 is 1.383900E-06
+   value of parameter X2 is 2.814900
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+Warning 123:  NODE "VOUT": A capacitor of more than 1F is attached to that node
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.3781 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.3781 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.3781 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.3781 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.3781 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 60% (t = 600.3781 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 70% (t = 700.3781 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 80% (t = 800.3781 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 55%)
+................................................
+Simulation progress                : 90% (t = 900.3781 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 86%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 10 out of 30
+   value of parameter X1 is 5.315710E+04
+   value of parameter X2 is 6.997700E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 11 out of 30
+   value of parameter X1 is 6.220800E-06
+   value of parameter X2 is 6.532400E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.5416 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.5416 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.5416 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.5416 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 50% (t = 500.5416 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 76%)
+................................................
+Simulation progress                : 60% (t = 600.5416 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 66%)
+................................................
+Simulation progress                : 70% (t = 700.5416 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.5416 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.5416 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 80%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 12 out of 30
+   value of parameter X1 is 6.716800E-06
+   value of parameter X2 is 2.884000
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+Warning 123:  NODE "VOUT": A capacitor of more than 1F is attached to that node
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  30)
+CPU Usage                          : 100%               (100%)
+
+
+
+
+***>CPU TIME 0s 030ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 13 out of 30
+   value of parameter X1 is 8.212128E+04
+   value of parameter X2 is 1.751300E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               ( 90%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 76%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 66%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 55%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 14 out of 30
+   value of parameter X1 is 1.152800E-06
+   value of parameter X2 is 4.261700E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:02
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:02*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.4337 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.4337 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.4337 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.4337 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 50% (t = 500.4337 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.4337 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 66%)
+................................................
+Simulation progress                : 70% (t = 700.4337 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 58%)
+................................................
+Simulation progress                : 80% (t = 800.4337 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 52%)
+................................................
+Simulation progress                : 90% (t = 900.4337 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               ( 90%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 83%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 15 out of 30
+   value of parameter X1 is 3.536800E-06
+   value of parameter X2 is 0.891970
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.7771 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.7771 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.7771 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.7771 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.7771 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.7771 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 70% (t = 700.7771 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.7771 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.7771 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 86%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 16 out of 30
+   value of parameter X1 is 3.050586E+04
+   value of parameter X2 is 6.633600E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 17 out of 30
+   value of parameter X1 is 2.087700E-06
+   value of parameter X2 is 1.445800E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.7867 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 20% (t = 200.7867 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.7867 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.7867 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.7867 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.7867 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 70% (t = 700.7867 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.7867 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.7867 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  30)
+CPU Usage                          : 100%               (100%)
+
+
+
+
+***>CPU TIME 0s 030ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 18 out of 30
+   value of parameter X1 is 5.847400E-06
+   value of parameter X2 is 0.687920
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.4501 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.4501 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.4501 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.4501 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.4501 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.4501 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 70% (t = 700.4501 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 80% (t = 800.4501 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.4501 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 86%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 19 out of 30
+   value of parameter X1 is 5.482849E+04
+   value of parameter X2 is 6.948500E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 20 out of 30
+   value of parameter X1 is 8.764400E-06
+   value of parameter X2 is 5.406100E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.5857 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.5857 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.5857 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.5857 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 50% (t = 500.5857 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 76%)
+................................................
+Simulation progress                : 60% (t = 600.5857 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 66%)
+................................................
+Simulation progress                : 70% (t = 700.5857 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 58%)
+................................................
+Simulation progress                : 80% (t = 800.5857 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.5857 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 83%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 21 out of 30
+   value of parameter X1 is 7.256500E-06
+   value of parameter X2 is 1.864400
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+Warning 123:  NODE "VOUT": A capacitor of more than 1F is attached to that node
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 86%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 22 out of 30
+   value of parameter X1 is 9.107672E+04
+   value of parameter X2 is 7.567800E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 23 out of 30
+   value of parameter X1 is 5.358700E-06
+   value of parameter X2 is 2.732600E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0322 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 20% (t = 200.0322 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.0322 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.0322 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0322 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0322 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 70% (t = 700.0322 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.0322 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.0322 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  30)
+CPU Usage                          : 100%               (100%)
+
+
+
+
+***>CPU TIME 0s 030ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 24 out of 30
+   value of parameter X1 is 5.492000E-06
+   value of parameter X2 is 2.113000
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+Warning 123:  NODE "VOUT": A capacitor of more than 1F is attached to that node
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 52%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 86%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 25 out of 30
+   value of parameter X1 is 6.171951E+04
+   value of parameter X2 is 9.016800E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 26 out of 30
+   value of parameter X1 is 8.603700E-06
+   value of parameter X2 is 2.107800E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.8028 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.8028 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.8028 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.8028 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 50% (t = 500.8028 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 76%)
+................................................
+Simulation progress                : 60% (t = 600.8028 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 66%)
+................................................
+Simulation progress                : 70% (t = 700.8028 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.8028 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.8028 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 83%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 27 out of 30
+   value of parameter X1 is 5.822200E-06
+   value of parameter X2 is 1.376200
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+Warning 123:  NODE "VOUT": A capacitor of more than 1F is attached to that node
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  30)
+CPU Usage                          : 100%               (100%)
+
+
+
+
+***>CPU TIME 0s 030ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 28 out of 30
+   value of parameter X1 is 8.606604E+04
+   value of parameter X2 is 9.840700E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 60% (t = 600.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 70% (t = 700.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 80% (t = 800.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 90% (t = 900.0486 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 55%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 29 out of 30
+   value of parameter X1 is 2.884600E-06
+   value of parameter X2 is 2.849400E-06
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.4796 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.4796 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 30% (t = 300.4796 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 40% (t = 400.4796 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.4796 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 76%)
+................................................
+Simulation progress                : 60% (t = 600.4796 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 66%)
+................................................
+Simulation progress                : 70% (t = 700.4796 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 58%)
+................................................
+Simulation progress                : 80% (t = 800.4796 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.4796 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 83%)
+
+
+
+
+***>CPU TIME 0s 020ms <***
+
+
+
+0************************************************************************************************************************
+
+
+run number 30 out of 30
+   value of parameter X1 is 5.006600E-06
+   value of parameter X2 is 0.679720
+1************************************************************************************************************************
+
+
+Eldo VERSION : ELDO 14.1 patch1 (64 bits) Fri Jul  4 10:16:17 GMT 2014
+
+*** DATE: 13-Nov-2015 09:27:03
+
+*** TITLE: NO_TITLE
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:1 iterations FOR DC analysis
+
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+VIN          0.0         VOUT         0.0         
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+V0         0.0          0.0          0.0         
+
+   TOTAL POWER DISSIPATION:  0.0        WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=7.500000e-04
+
+................................................
+Simulation progress                : 10% (t = 100.0112 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 20% (t = 200.0112 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 30% (t = 300.0112 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 40% (t = 400.0112 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 50% (t = 500.0112 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 83%)
+................................................
+Simulation progress                : 60% (t = 600.0112 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 71%)
+................................................
+Simulation progress                : 70% (t = 700.0112 U)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 800.0112 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 900.0112 U)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 1.0000 M)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 86%)
+
+
+
+1***************13-Nov-2015 ***********************  ELDO 14.1 patch1 (64 bits)  (v7.11_1.1)  ***********************09:27:03*****************
+
+0NO_TITLE
+0****                 ACCOUNTING INFORMATION                                 TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+Number of nodes                     2
+Number of intrinsic nodes           0
+Number of input signals             1
+Number of resistors                 1
+Number of floating capacitors       0
+Number of grounded capacitors       1
+Number of inductors                 0
+Number of voltage sources           1
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       0
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  3
+Number of equations                 1
+Number of non-zero terms            1
+Percent Zeros                          0
+Number of Newton iterations         1034
+Average number of Newton iterations 1.012
+Number of accepted time steps       1022
+Number of rejected time steps       0
+      due to LTE                    0
+      due to Newton                 0
+Evaluation of active devices        0
+Memory size (MB)                    265.6
+
+***>CPU TIME 0s 020ms <***
+
+***>MESSAGE SUMMARY: 2 warnings
+
+***>GLOBAL CPU TIME 0s 680ms <***
+
+
+***>GLOBAL ELAPSED TIME 1s <***
+
+
+  Job started at 13-Nov-2015 09:27:02
+  Job end at     13-Nov-2015 09:27:03
+
+  Run on pc-klas1-8.esat.kuleuven.be (Linux 3.10.0-229.20.1.el7.x86_64)
+

@@ -4,18 +4,16 @@ function selection=selectionTournament(population,NP,V,M)
     %index = index(round(NP/5):end);
     selected = [];
     %selected = population(1:round(NP/5),:);
-    for i = 1:NP
+    for i=1:NP
         %for i=1:NP-round(NP/5)
-        if rand < 0.5 %Favor those who are in the beginning of the (sorted!) list
-            sizeLeft = round(size(index,2)/2);
+        if rand < 0.5
         else
-            sizeLeft = size(index,2);
         end
-        
-        a = randi(sizeLeft,1);
-        b = randi(sizeLeft,1);
+        sizeLeft = size(index);
+        a = randi(sizeLeft);
+        b = randi(sizeLeft);
         while b == a
-            b = randi(sizeLeft,1);
+            b = randi(sizeLeft);
         end
         a = index(a);
         b = index(b);

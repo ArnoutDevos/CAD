@@ -1,4 +1,4 @@
-clear all;
+%clear all;
 clf;
 
 % Define the boundaries of the problem.

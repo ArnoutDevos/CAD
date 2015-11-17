@@ -1,7 +1,7 @@
 
 .global 0 
 
-.param R1=10000 W1=1u L1=1u Wb=1u Lb=1u VB=1 Voffset=1
+.param R1=10000 W1=1u L1=1u Wb=1u Lb=1u VB=1 Wd=1u Ld=1u
 
 
 *resistive load diff pair
@@ -9,8 +9,8 @@
 .model nMOS nmos level=53
 .model pMOS pmos level=53
 
-R01 netVDD voutl 'R1'
-R02 netVDD voutr 'R1'
+m4 voutl voutl netVDD netVDD pMOS w='Wd' l='Ld'
+m5 voutr voutl netVDD netVDD pMOS w='Wd' l='Ld'
 
 m1 voutl vinl virtgr 0 nMOS w='W1' l='L1'
 m2 voutr vinr virtgr 0 nMOS w='W1' l='L1'
@@ -21,19 +21,16 @@ C02 voutl 0 5p
 m3 virtgr vbias 0 0 nMOS w='Wb' l='Lb'
 
 V0 netVDD 0 dc 3.3
-
-V1 voffset 0 dc 'Voffset'
-
-V3 vinl voffset ac 0.01
-
-V4 vinr voffset ac -0.01
-
+V1 voffset 0 dc 2
+V3 vinl voffset dc 0
+V4 vinr voffset dc -0
 V2 vbias 0 'VB'
 
-.ac dec 10 100 1G data=list
 
-.data list R1 W1 L1 Wb Lb VB Voffset
+.dc data=list
+
+.data list R1 W1 L1 Wb Lb VB Wd Ld
 xxPARAMxx
 .enddata
 
-.printfile ac v(voutr, voutl) file=acResult
+.printfile dc ID(m3) file=dcResult

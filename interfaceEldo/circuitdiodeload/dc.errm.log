@@ -1,0 +1,5 @@
+START report: Tue Nov 17 11:45:23 2015 
+** Warning: (eldo-501)  In file "./interfaceEldo/circuitdiodeload/dc" line 9:
++    MODEL "NMOS": No parameter specified. Default values are used. 
+** Warning: (eldo-501)  In file "./interfaceEldo/circuitdiodeload/dc" line 10:
++    MODEL "PMOS": No parameter specified. Default values are used. 

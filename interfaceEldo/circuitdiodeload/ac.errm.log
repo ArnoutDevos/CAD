@@ -1,0 +1,9 @@
+START report: Tue Nov 17 11:45:24 2015 
+** Warning: (eldo-501)  In file "./interfaceEldo/circuitdiodeload/ac" line 11:
++    MODEL "NMOS": No parameter specified. Default values are used. 
+** Warning: (eldo-501)  In file "./interfaceEldo/circuitdiodeload/ac" line 12:
++    MODEL "PMOS": No parameter specified. Default values are used. 
+** Warning: (eldo-204)  In file "./interfaceEldo/circuitdiodeload/ac" line 34:
++    OBJECT "V2": Already defined.
+** Error: (eldo-434)  In file "./interfaceEldo/circuitdiodeload/ac" line 38:
++   COMMAND ".DATA list": The number of values (2) does not match the number of parameters (8).

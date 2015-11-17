@@ -1,0 +1,57 @@
+
+.global 0 
+
+.param R1=10000 W1=1u L1=1u Wb=1u Lb=1u VB=1
+
+
+*resistive load diff pair
+
+.model nMOS nmos level=53
+.model pMOS pmos level=53
+
+R01 netVDD voutl 'R1'
+R02 netVDD voutr 'R1'
+
+m1 voutl vinl virtgr 0 nMOS w='W1' l='L1'
+m2 voutr vinr virtgr 0 nMOS w='W1' l='L1'
+
+C01 voutr 0 5p
+C02 voutl 0 5p
+
+m3 virtgr vbias 0 0 nMOS w='Wb' l='Lb'
+
+V0 netVDD 0 dc 3.3
+
+*V3 vinl voffset pulse( 0 0.5 0 1p 1m)
+
+*V4 vinr voffset pulse( 0 -0.5 0 1p 1m)
+
+*V3 vinl voffset ac=0.5
+
+*V4 vinr voffset ac=-0.5
+
+V3 vinl voffset dc 0 ac sin(0 0.01 1e3)
+
+V4 vinr voffset dc 0 ac sin(0 -0.01 1e3)
+
+V1 voffset 0 dc 2
+
+V2 vbias 0 'VB'
+
+.option hmax=1u
+.tran 1u 1m data=list
+
+.data list R1 W1 L1 Wb Lb VB
++ 86697.1584 9.685e-06 1.6208e-06 5.7741e-06 3.3683e-06 2.1588 
++ 52052.658 7.8876e-06 2.5011e-06 1.6668e-06 1.9245e-06 1.8439 
++ 97362.9076 6.1708e-06 9.5269e-06 3.8064e-06 5.3535e-06 2.8535 
++ 85711.9614 9.2433e-06 8.2998e-06 9.0565e-06 4.77e-06 1.8115 
++ 17069.3386 5.4589e-06 7.3941e-06 8.5129e-06 4.4316e-06 2.7164 
++ 31383.8999 2.4941e-06 9.7322e-06 1.0211e-06 8.9809e-06 2.4121 
++ 83581.3793 3.934e-06 9.9858e-06 6.7619e-06 4.785e-06 2.1734 
++ 46524.5843 3.6679e-06 9.8871e-06 8.2286e-06 3.5546e-06 2.7787 
++ 51968.0999 6.0247e-06 2.3508e-06 3.2062e-06 1.4336e-06 2.2804 
++ 95638.2596 1.6073e-06 9.6263e-06 1.5771e-06 2.9725e-06 1.9555 
+.enddata
+
+.printfile tran v(voutr, voutl) file=tranResult

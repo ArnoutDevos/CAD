@@ -18,22 +18,19 @@ m2 voutr vinr virtgr 0 nMOS w='W1' l='L1'
 C01 voutr 0 5p
 C02 voutl 0 5p
 
-m3 virtgr vbias 0 0 nMOS w='Wb' l='Lb'
+m3 virtgr vbias 0 0 nMOS w='Wb' l='L1'
 
 V0 netVDD 0 dc 3.3
-
 V1 voffset 0 dc 'Voffset'
-
-V3 vinl voffset ac 0.01
-
-V4 vinr voffset ac -0.01
-
+V3 vinl voffset dc 0
+V4 vinr voffset dc -0
 V2 vbias 0 'VB'
 
-.ac dec 10 100 1G data=list
+
+.dc data=list
 
 .data list R1 W1 L1 Wb Lb VB Voffset
 xxPARAMxx
 .enddata
 
-.printfile ac v(voutr, voutl) file=acResult
+.printfile dc ID(m3) file=dcResult

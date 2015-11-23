@@ -13,3 +13,4 @@ M=2;
 % Use the GA
 res=myGA(@(x) benchmark(3,x),V,M,lb,ub);
 
+

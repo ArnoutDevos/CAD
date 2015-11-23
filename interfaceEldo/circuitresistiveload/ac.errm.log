@@ -1,4 +1,4 @@
-START report: Tue Nov 17 19:27:50 2015 
+START report: Mon Nov 23 18:21:56 2015 
 ** Warning: (eldo-501)  In file "./interfaceEldo/circuitresistiveload/ac" line 9:
 +    MODEL "NMOS": No parameter specified. Default values are used. 
 ** Warning: (eldo-501)  In file "./interfaceEldo/circuitresistiveload/ac" line 10:

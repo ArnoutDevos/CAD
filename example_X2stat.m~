@@ -11,26 +11,26 @@ M=2;
 %V=2;
 %M=1;
 % Use the GA
-n=11;
+n=5;
 PopDivider=2;
 QFactor =0.99;
 gamma=0.2;
-N = 30;
 itstat = [];
-for QFactor=0.98:0.002:0.996
+for gamma=10:5:60
+    N = 30;
     ittotaal = [];
     timetotal = []
     for i = 1:n
         i
         tic
-        [pop, it] = myGAstat(@(x) benchmark(3,x),V,M,lb,ub,N,PopDivider,QFactor,gamma);
+        [pop, it] = myGAstat(@(x) benchmark(3,x),V,M,lb,ub,30,PopDivider,QFactor,gamma);
         T=toc;
         ittotaal = [ittotaal it];
         timetotal = [timetotal T];
         
     end
     
-    itstat = [itstat; QFactor mean(ittotaal) std(ittotaal) mean(timetotal) std(timetotal)];
+    itstat = [itstat; N mean(ittotaal) std(ittotaal) mean(timetotal) std(timetotal)];
 end
 hold off
 errorbar(itstat(:,1),itstat(:,2),itstat(:,3))

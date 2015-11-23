@@ -6,7 +6,7 @@ variablesDesign = variablesDesign * diag(ub-lb) + ones(size(variablesDesign))*di
 
 result = [];
 for i = 1:size(population,1)
-    i
+    
    result = [result; f(variablesDesign(i,:))];
 end
 % result = f(variablesDesign(:,1:V));

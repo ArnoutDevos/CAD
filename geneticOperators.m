@@ -1,4 +1,4 @@
-function children=geneticOperators(parents,NC,P,V,M,f,lb,ub)
+function children=geneticOperators(parents,NC,P,V,M,f,lb,ub,sigmamut,sigmarec)
 
 PS=size(parents,1);
 children =[];
@@ -10,7 +10,7 @@ for i = 1:NC
         else
             mask=rand(1,V)< 0.25;
         end
-        parent(1,1:V) = min(max(parent(1,1:V) + mask*0.2.*randn(1,V) ,0),1);
+        parent(1,1:V) = min(max(parent(1,1:V) + mask*sigmamut.*randn(1,V) ,0),1);
         children = [children; parent(1,1:V)];
     else
 %         B=randi(V-1);
@@ -33,9 +33,9 @@ for i = 1:NC
         child = [];
         for j = 1:V
            if rand < 0.5
-               child = [child min(max(parentA(j)+0.1*rand,0),1)];
+               child = [child min(max(parentA(j)+sigmarec*randn,0),1)];
            else
-               child = [child min(max(parentB(j)+0.1*rand,0),1)];
+               child = [child min(max(parentB(j)+sigmarec*randn,0),1)];
            end
            
         end

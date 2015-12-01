@@ -1,7 +1,7 @@
 
 .global 0 
 
-.param R1=10000 W1=1u L1=1u Wb=1u Lb=1u VB=1 Wd=1u Ld=1u Voffset=1
+.param W1=1u L1=1u Wb=1u Lb=1u VB=1 Wd=1u Ld=1u Voffset=1
 
 
 *resistive load diff pair
@@ -29,7 +29,7 @@ V2 vbias 0 'VB'
 
 .dc data=list
 
-.data list R1 W1 L1 Wb Lb VB Wd Ld Voffset
+.data list W1 L1 Wb Lb VB Wd Ld Voffset
 xxPARAMxx
 .enddata
 

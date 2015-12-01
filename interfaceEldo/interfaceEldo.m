@@ -1,6 +1,7 @@
 function obj = interfaceEldo(filename,x,verbose,dotran)
 %SPEEDUP, remove ]);%>  /dev/null']); after each unix command
     % Example for DC simulations
+    Ntemp = max(size(x));
     injectValues(filename,x,'dc');
     unix(['eldo interfaceEldo/' filename '/dc> /dev/null']);
     dataDC=extractDC(filename);
@@ -12,7 +13,7 @@ function obj = interfaceEldo(filename,x,verbose,dotran)
     dataTran=extractTran(filename);
     
     if verbose ==1
-        for j=1:50
+        for j=1:Ntemp
             hold off
             plot(dataTran{j}.time,dataTran{j}.X);
             drawnow;
@@ -31,7 +32,7 @@ function obj = interfaceEldo(filename,x,verbose,dotran)
     inputAmplitude = 0.02;
     
     if verbose == 1
-        for j=1:10
+        for j=1:Ntemp
              %loglog(dataAC{j}.f, sum([dataAC{j}.RX dataAC{j}.IX].^2,2) );
              loglog(dataAC{j}.f, sqrt(sum([dataAC{j}.RX dataAC{j}.IX].^2,2))/inputAmplitude);
             drawnow;
@@ -43,7 +44,7 @@ function obj = interfaceEldo(filename,x,verbose,dotran)
     hold off
     GBW=[];
     Gaino = [];
-    for j=1:50
+    for j=1:Ntemp
         Gain    = norm([dataAC{j}.RX(1) dataAC{j}.IX(1)])/inputAmplitude;
         %[a index] = min(abs(sum([dataAC{j}.RX dataAC{j}.IX].^2,2)-ones(size(dataAC{j}.f))*(1/sqrt(2))*sum([dataAC{j}.RX(1) dataAC{j}.IX(1)].^2,2)));
         index = find(Gain/sqrt(2)>sqrt(sum([dataAC{j}.RX dataAC{j}.IX].^2,2))/inputAmplitude,1);

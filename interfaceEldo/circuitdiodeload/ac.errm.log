@@ -1,9 +1,13 @@
-START report: Tue Nov 17 11:45:24 2015 
+START report: Tue Dec  1 15:42:37 2015 
 ** Warning: (eldo-501)  In file "./interfaceEldo/circuitdiodeload/ac" line 11:
 +    MODEL "NMOS": No parameter specified. Default values are used. 
 ** Warning: (eldo-501)  In file "./interfaceEldo/circuitdiodeload/ac" line 12:
 +    MODEL "PMOS": No parameter specified. Default values are used. 
 ** Warning: (eldo-204)  In file "./interfaceEldo/circuitdiodeload/ac" line 34:
 +    OBJECT "V2": Already defined.
-** Error: (eldo-434)  In file "./interfaceEldo/circuitdiodeload/ac" line 38:
-+   COMMAND ".DATA list": The number of values (2) does not match the number of parameters (8).
+** Warning: (eldo-114)   NODE "VBIAS": Second input signal ignored on that node
+** Error: (eldo-27)   Inductor/'voltage source' loop found
++   Voltage loop  made of 0 voltage sources only can be accepted using .OPTION LOOPV0
++   To downgrade this error to a warning  use .OPTION VOLTAGE_LOOP_SEVERITY = WARNING
+** Error: (eldo-838)  OBJECT "V2": Already defined. The check for duplicate instance names can be disabled with '.OPTION CHECKDUPL=0'.
+** Error: (eldo-838)  OBJECT "V2": Already defined. The check for duplicate instance names can be disabled with '.OPTION CHECKDUPL=0'.

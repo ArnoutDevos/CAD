@@ -1,4 +1,4 @@
-function population=myGA(f,V,M,lb,ub)
+function [it,population] =myGA(f,V,M,lb,ub)
 % myGA(f,V,M,lb,ub)
 % f : function to minimize
 % V : Dimension of the search space.
@@ -29,14 +29,17 @@ population=sortPopulation(population,V,M);
 flag = true;
 previouspopulation = [];
 it=1;
+T=0;
+Pit = [];
+psigma = [];
 while flag
-    
+    tic
     P=1-Q;
-
     sigmamut=Q*0.2;
-    sigmarec=min(0.2,0.01/Q)
-    NC = round(NP+(2*N-NP)*Q*Q)
+    sigmarec=min(0.2,0.01/Q);
+    NC = round(NP+(2*N-NP)*Q*Q);
     Q=Q*0.99;
+
     
     parents=selectionTournament(population,NP,V,M);	
     
@@ -51,24 +54,28 @@ while flag
     
     population=cropPopulation(population,N);
 
-    % Visualization
+    
+    [flag, previouspopulation] = stopCriterion(it,population,previouspopulation,V,M,N);
+
+    T=T+toc;
     if verbose
-        illustratePopulation(population,V,M,lb,ub,it);
-        drawnow;
-        %pause(0.1);
+         figure(1)
+         hold off
+         plot(population(:,V+1),population(:,V+2),'x')
+          title(['Search Space, Iteration ' num2str(it)])
+    %     t=0:0.01:1;
+    %     hold on
+    %     plot(t,1-t.^2,'r');
     end
-     figure(1)
-     hold off
-     plot(population(:,V+1),population(:,V+2),'x')
-      title(['Search Space, Iteration ' num2str(it)])
-%     t=0:0.01:1;
-%     hold on
-%     plot(t,1-t.^2,'r');
-    pause(0.1)
         
     it=it+1;
-    [flag, previouspopulation] = stopCriterion(it,population,previouspopulation,V,M,N);
-end
-it = it-1
 
+end
+it = it-1;
+disp(['Totale iteratietijd ', num2str(T), ' s'])
+figure(1)
+hold off
+plot(population(:,V+1),population(:,V+2),'x')
+title(['Search Space, Iteration ' num2str(it)])
+pause(0.1)
 end

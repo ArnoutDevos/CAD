@@ -1,7 +1,7 @@
 
 .global 0 
 
-.param R1=10000 W1=1u L1=1u Wb=1u Lb=1u VB=1 Wd=1u Ld=1u
+.param W1=1u L1=1u Wb=1u Lb=1u VB=1 Wd=1u Ld=1u Voffset=1
 
 
 *resistive load diff pair
@@ -25,7 +25,7 @@ m3 virtgr vbias 0 0 nMOS w='Wb' l='Lb'
 
 V0 netVDD 0 dc 3.3
 
-V1 voffset 0 dc 2
+V1 voffset 0 dc 'Voffset'
 
 V3 vinl voffset ac 0.01
 
@@ -35,7 +35,7 @@ V2 vbias 0 'VB'
 
 .ac dec 10 100 1G data=list
 
-.data list R1 W1 L1 Wb Lb VB Wd Ld
+.data list W1 L1 Wb Lb VB Wd Ld Voffset
 xxPARAMxx
 .enddata
 

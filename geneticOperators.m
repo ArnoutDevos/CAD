@@ -3,7 +3,7 @@ function children=geneticOperators(parents,NC,P,V,M,f,lb,ub,sigmamut,sigmarec)
 PS=size(parents,1);
 children =[];
 for i = 1:NC
-    if(rand > P)
+    if(rand > P) %mutatie
         parent = parents(randi(size(parents,1)),:);
         if parent(V+M+2) == 0
             mask = rand(1,V) < 0.5; 
@@ -12,17 +12,8 @@ for i = 1:NC
         end
         parent(1,1:V) = min(max(parent(1,1:V) + mask*sigmamut.*randn(1,V) ,0),1);
         children = [children; parent(1,1:V)];
-    else
-%         B=randi(V-1);
-%         keuzeA = randi(size(parents,1));
-%         keuzeB = randi(size(parents,1));
-%         while parents(keuzeB,1:V) == parents(keuzeA,1:V)
-%             keuzeB = randi(size(parents,1));
-%         end
-%         child1 = parents(keuzeA,1:B);
-%         child2 = parents(keuzeB,B+1:V);
-%         children = [children; child1,child2];
-
+    else %recombinatie
+    if (rand > 0.3) %binomiale recombinatie met kleine mutatie
         keuzeA = randi(size(parents,1));
         keuzeB = randi(size(parents,1));
         while parents(keuzeB,1:V) == parents(keuzeA,1:V)
@@ -40,6 +31,20 @@ for i = 1:NC
            
         end
         children = [children; child];
+    else %lineaire interpolatie
+                keuzeA = randi(size(parents,1));
+        keuzeB = randi(size(parents,1));
+        while parents(keuzeB,1:V) == parents(keuzeA,1:V)
+            keuzeB = randi(size(parents,1));
+        end
+        parentA = parents(keuzeA,:);
+        parentB = parents(keuzeB,:);
+        child = [];
+        for j = 1:V
+           child = [child (parentA(j)+parentB(j))/2];
+           
+        end
+    end
     end
 end
 

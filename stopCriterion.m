@@ -14,6 +14,7 @@ function [flag, passdownpopulation]=stopCriterion(it,population,previouspopulati
     
      newArea = calcArea(sorted1(:,1:M),M);
      oldArea=Inf;
+     mean(rankones(:,V+M+2))/std(rankones(:,V+M+2))
      if (length(previouspopulation)~=0)
         sorted2 = sortrows(previouspopulation(:,V+1:V+M+2),1);
         oldArea = calcArea(sorted2(:,1:M),M);
@@ -38,7 +39,7 @@ function [flag, passdownpopulation]=stopCriterion(it,population,previouspopulati
 %              flag = 1;
 %              abs((newtrap-trapz(sorted2(:,1),sorted2(:,2)))/newtrap)
 %         end
-    elseif max(population(:,V+M+1)) <= 2 && abs((newArea-oldArea)/newArea) < 1e-6 && mean(rankones(:,V+M+2))/std(rankones(:,V+M+2))>= 2.7
+    elseif max(population(:,V+M+1)) <= 2 && abs((newArea-oldArea)/newArea) < 1e-6 && mean(rankones(:,V+M+2))/std(rankones(:,V+M+2))>= 2
         flag = 0;
     else
        flag = 1;     

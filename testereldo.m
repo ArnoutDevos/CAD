@@ -10,7 +10,7 @@ ub=[ 10e-6 3e-6 10e-6 3e-6 3.3 10e-6 3e-6 3.3] ;
 
 %interfaceEldo('circuitresistiveload',x,1,0)
 
-[it,res]=myGA(@(x) interfaceEldo('circuitdiodeload',x,0,0),size(ub,2),2,lb,ub);
+[it,res]=myGA(@(x) interfaceEldo('circuitdiodeload',x,1,0),size(ub,2),2,lb,ub);
 
 res(:,size(ub,2)+1) = -1*res(:,size(ub,2)+1);
 res(:,size(ub,2)+3:size(ub,2)+4) = [];

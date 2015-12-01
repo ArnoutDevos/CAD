@@ -12,14 +12,14 @@ function obj = interfaceEldo(filename,x,verbose,dotran)
     unix(['eldo interfaceEldo/' filename '/tran> /dev/null']);
     dataTran=extractTran(filename);
     
-    if verbose ==1
-        for j=1:Ntemp
-            hold off
-            plot(dataTran{j}.time,dataTran{j}.X);
-            drawnow;
-            pause;
+        if verbose ==1
+            for j=1:Ntemp
+                hold off
+                plot(dataTran{j}.time,dataTran{j}.X);
+                drawnow;
+                pause;
+            end
         end
-    end
     end
     
     % Example for AC simulations

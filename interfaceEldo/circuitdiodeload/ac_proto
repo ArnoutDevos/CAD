@@ -6,7 +6,6 @@
 
 *resistive load diff pair
 
-V2 vbias 0 'VB'
 
 .model nMOS nmos level=53
 .model pMOS pmos level=53

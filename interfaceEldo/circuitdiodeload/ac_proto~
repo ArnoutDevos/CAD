@@ -25,7 +25,7 @@ m3 virtgr vbias 0 0 nMOS w='Wb' l='Lb'
 
 V0 netVDD 0 dc 3.3
 
-V1 voffset 0 dc 2
+V1 voffset 0 dc 'Voffset'
 
 V3 vinl voffset ac 0.01
 

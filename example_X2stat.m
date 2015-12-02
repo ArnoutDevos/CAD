@@ -27,6 +27,7 @@ for QFactor=0.98:0.002:0.996
         T=toc;
         ittotaal = [ittotaal it];
         timetotal = [timetotal T];
+        pause(0.1) %allow for plot outside tic toc if necessary
         
     end
     

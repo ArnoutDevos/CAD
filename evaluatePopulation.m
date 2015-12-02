@@ -8,11 +8,11 @@ result = [];
 
 %Turn for loop on for testbench, calculate parallel for eldo
 
-% for i = 1:size(population,1)
-%     
-%    result = [result; f(variablesDesign(i,:))];
-% end
-result = f(variablesDesign(:,1:V));
+ for i = 1:size(population,1)
+     
+    result = [result; f(variablesDesign(i,:))];
+ end
+% result = f(variablesDesign(:,1:V));
  population = [population(:,1:V) result];
 
 end

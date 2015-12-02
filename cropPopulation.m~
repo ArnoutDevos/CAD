@@ -12,9 +12,9 @@ newpop=CDsortPopulation(newpop(1:end-tbcut,1:V+M+1),V,M);
 new=newpop(1:nb,:);
 
 %Single elimination
-% newpop=old;
-% while(size(newpop,1)>nb)
-%     newpop=CDsortPopulation(newpop(1:end-1,1:V+M+1),V,M);
-% end
-% new=newpop;
+newpop=old
+while(size(newpop,1)>nb)
+    
+end
+new=new
 end

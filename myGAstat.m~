@@ -48,7 +48,7 @@ while flag
     
 
     
-    population=cropPopulation(population,N,V,M);
+    population=cropPopulation(population,N);
         
     it=it+1;
     [flag, previouspopulation] = stopCriterion(it,population,previouspopulation,V,M,N);
@@ -57,5 +57,6 @@ end
     it = it-1
     plot(population(:,V+1),population(:,V+2),'x')
     title(['Search Space, Iteration ' num2str(it)])
+    pause(0.1)
 
 end

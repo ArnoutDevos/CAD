@@ -24,21 +24,10 @@ for i = 1:NC
         child = [];
         for j = 1:V
            if rand < 0.5
-               newvalue = parentA(j)+sigmarec*randn;
-               if newvalue > 1
-                   newvalue = 1 - abs(mod(newvalue,1));
-               elseif newvalue < 0
-                   newvalue = 0 + abs(mod(newvalue,-1));
-               end
-               child = [child newvalue];
+               newvalue = 
+               child = [child min(max(parentA(j)+sigmarec*randn,0),1)];
            else
-               newvalue = parentB(j)+sigmarec*randn;
-               if newvalue > 1
-                   newvalue = 1 - abs(mod(newvalue,1));
-               elseif newvalue < 0
-                   newvalue = 0 + abs(mod(newvalue,-1));
-               end
-               child = [child newvalue];
+               child = [child min(max(parentB(j)+sigmarec*randn,0),1)];
            end
            
         end

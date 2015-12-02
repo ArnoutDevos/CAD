@@ -1,6 +1,6 @@
 
 
-function [population,it]=myGA(f,V,M,lb,ub,N,PopDivider,QFactor,gamma)
+function [it,population]=myGA(f,V,M,lb,ub,N,PopDivider,QFactor,gamma)
 % myGA(f,V,M,lb,ub)
 % f : function to minimize
 % V : Dimension of the search space.

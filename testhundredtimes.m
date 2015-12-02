@@ -1,5 +1,5 @@
 ittotaal=[];
-for i=1:10
+for i=1:100
     example_X2;
     ittotaal=[ittotaal;it];
 end

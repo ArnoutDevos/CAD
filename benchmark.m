@@ -24,7 +24,7 @@ switch nb
         %% Objective function one
         f(1) = 1 - exp(-4*x(1))*(sin(6*pi*x(1)))^6;
         sum1 = 0;
-        for i = 2 : 6
+        for i = 2 : max(size(x))
             sum1 = sum1 + x(i)/4;
         end
         %% Intermediate function

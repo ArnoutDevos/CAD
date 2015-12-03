@@ -2,9 +2,9 @@
 clf;
 
 % Define the boundaries of the problem.
-lb=[0 0 0 0 0 0];
-ub=[1 1 1 1 1 1];
-V=6;
+lb=[0 0];
+ub=[1 1];
+V=size(ub,2);
 M=2;
 %lb=[-5 -5];
 %ub=[5 5];

@@ -4,7 +4,7 @@ clf;
 % Define the boundaries of the problem.
 lb=[0 0 0 0 0 0];
 ub=[1 1 1 1 1 1];
-V=6;
+V=size(ub,2);
 M=2;
 %lb=[-5 -5];
 %ub=[5 5];
@@ -17,8 +17,10 @@ QFactor =0.993;
 gamma=0.38;
 N = 30;
 itstat = [];
-for PopDivider=2:1:10
-    PopDivider
+for V=2:1:20
+    lb=zeros(1,V);
+    ub=ones(1,V);
+    V
     ittotaal = [];
     timetotal = [];
     for i = 1:n
@@ -32,7 +34,7 @@ for PopDivider=2:1:10
         
     end
     
-    itstat = [itstat; 1/PopDivider mean(ittotaal) std(ittotaal) mean(timetotal) std(timetotal)];
+    itstat = [itstat; V mean(ittotaal) std(ittotaal) mean(timetotal) std(timetotal)];
 end
 hold off
 errorbar(itstat(:,1),itstat(:,2),itstat(:,3))

@@ -39,7 +39,7 @@ function [flag, passdownpopulation]=stopCriterion(it,population,previouspopulati
 %              flag = 1;
 %              abs((newtrap-trapz(sorted2(:,1),sorted2(:,2)))/newtrap)
 %         end
-    elseif max(population(:,V+M+1)) <= 1 && abs((newArea-oldArea)/newArea) < 1e-6 && mean(rankones(:,V+M+2))/std(rankones(:,V+M+2))>= 2
+    elseif max(population(:,V+M+1)) <= 1 && abs((newArea-oldArea)/newArea) < 1e-6 && mean(rankones(:,V+M+2))/std(rankones(:,V+M+2))>= 2.7
         flag = 0;
     else
        flag = 1;     

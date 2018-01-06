@@ -9,7 +9,7 @@ M=2;
 %lb=[-5 -5];
 %ub=[5 5];
 %V=2;
-%M=1;
+%M=1; 
 % Use the GA
 n=15;
 PopDivider=2;
@@ -17,10 +17,10 @@ QFactor =0.993;
 gamma=0.38;
 N = 30;
 itstat = [];
-for V=2:1:20
+for N=25:5:60
     lb=zeros(1,V);
     ub=ones(1,V);
-    V
+    N
     ittotaal = [];
     timetotal = [];
     for i = 1:n
@@ -34,7 +34,7 @@ for V=2:1:20
         
     end
     
-    itstat = [itstat; V mean(ittotaal) std(ittotaal) mean(timetotal) std(timetotal)];
+    itstat = [itstat; N mean(ittotaal) std(ittotaal) mean(timetotal) std(timetotal)];
 end
 hold off
 errorbar(itstat(:,1),itstat(:,2),itstat(:,3))

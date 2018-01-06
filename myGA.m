@@ -75,7 +75,7 @@ while flag
 
 end
 it = it-1;
-disp(['Totale iteratietijd ', num2str(T), ' s'])
+%disp(['Totale iteratietijd ', num2str(T), ' s'])
 figure(1)
 hold off
 plot(population(:,V+1),population(:,V+2),'x')

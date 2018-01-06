@@ -27,7 +27,7 @@ function selection=selectionTournament(population,NP,V,M)
         else
             index = index(index~=a);
         end
-        selected = [selected;population(b,:)];
+        selected = [selected;population(a,:)];
     end
     
     selection = selected;
